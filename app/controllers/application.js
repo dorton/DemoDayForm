@@ -6,15 +6,8 @@ export default Ember.Controller.extend({
 
   demo: {
    isOpen: true,
-   count: 0,
+   count: 1,
    selectedAlignment: 'md-left'
- },
-
- actions: {
-   assignCohort: function(cohort){
-     console.log("Yo from controller");
-     this.set("cohort", cohort);
-   }
  }
 
 });

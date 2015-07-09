@@ -1,6 +1,15 @@
 {{cohort}}
 
-{{cohort-list model=model cohort=assignCohort}}
+
+<!-- {{cohort-list model=model cohort=assignCohort}} -->
+
+<h2>Select a Cohort</h2>
+
+{{#each model key="id" as |cohort|}}
+  <li>
+    <a href="#" {{action 'assignCohort' cohort }}>{{cohort.city}} - {{cohort.name}}</a>
+  </li>
+{{/each}}
 
 
 {{outlet}}

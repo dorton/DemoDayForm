@@ -3,9 +3,11 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   actions: {
-    cohort: function(cohort){
+    cohort: function(theCohort){
       console.log("Yo!");
-      this.sendAction(cohort);
+      // either send action to controller that cohort was set
+      // OR  ... set cohort on applicationController
+      this.sendAction();
     }
   }
 });

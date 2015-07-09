@@ -8,5 +8,13 @@ export default Ember.Route.extend({
     // });
 
     return this.store.findAll('cohort');
+  },
+
+
+  actions: {
+    assignCohort: function(cohort){
+      console.log("Yo from controller");
+      this.set("cohort", cohort);
+    }
   }
 });
