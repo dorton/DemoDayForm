@@ -1,0 +1,16 @@
+<h2>Register your project</h2>
+
+
+
+<md-content class="md-padding" layout="row" layout-sm="column">
+    {{#md-input-container value=user.title}}
+        <label>Title</label>
+        {{md-input }}
+    {{/md-input-container}}
+    {{#md-input-container value=user.email}}
+        <label>Email</label>
+        {{md-input type="email"}}
+    {{/md-input-container}}
+</md-content>
+
+{{outlet}}

@@ -1,0 +1,9 @@
+<h2>Select a Cohort</h2>
+
+{{#each model key="id" as |cohort|}}
+  <li>
+    <a href="#" {{action 'cohort' cohort }}>{{cohort.city}} - {{cohort.name}}</a>
+  </li>
+{{/each}}
+
+{{yield}}

@@ -6,6 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('project', {path: "/cohorts/:cohort_id/projects"}, function() {
+    this.route('new');
+    this.route('show', {path: "/:id"} );
+  });
+
 });
 
 export default Router;
