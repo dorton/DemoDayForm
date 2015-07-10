@@ -1,15 +1,24 @@
-{{cohort}}
 
 
-<!-- {{cohort-list model=model cohort=assignCohort}} -->
 
-<h2>Select a Cohort</h2>
+<md-content class="md-padding">
 
-{{#each model key="id" as |cohort|}}
-  <li>
-    <a href="#" {{action 'assignCohort' cohort }}>{{cohort.city}} - {{cohort.name}}</a>
-  </li>
-{{/each}}
+    <h2 class="md-display-1">Select a Cohort</h2>
+
+    {{#md-list}}
+
+    {{#each model key="id" as |cohort|}}
+      {{#md-list-item class="md-3-line"}}
+        <div class="md-list-item-text">
+          {{#md-button class="md-primary md-hue-1"}}<a href="#" {{action 'assignCohort' cohort }}>{{cohort.city}} - {{cohort.demo_day_date}}</a>{{/md-button}}
+        </div>
+      {{/md-list-item}}
+    {{/each}}
+
+    {{/md-list}}
+
 
 
 {{outlet}}
+
+</md-content>

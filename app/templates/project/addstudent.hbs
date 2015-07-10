@@ -1,0 +1,67 @@
+<h2>Add To Project {{project.app_name}} for {{project.cohort.display_name}}</h2>
+
+
+{{#if errorMessage}}
+  {{#md-toolbar class="md-warn"}}
+    <div class="md-toolbar-tools">
+        <h2 class="md-flex">{{errorMessage}}</h2>
+    </div>
+  {{/md-toolbar}}
+{{/if}}
+
+
+<md-content class="md-padding" style="">
+
+  <form {{action "addStudent" on="submit"}}>
+      {{#md-input-container value=model.name}}
+          <label>Name</label>
+          {{md-input }}
+      {{/md-input-container}}
+
+
+      {{#md-input-container value=model.email}}
+          <label>Email</label>
+          {{md-input }}
+      {{/md-input-container}}
+
+
+  <div layout layout-sm="column" class="courseSelection">
+        {{#md-input-container  value=model.course}}
+
+            {{#md-button class="md-raised rails" param="rails" action="setCourse" tagName="a"}}Rails Engineering{{/md-button}}
+            {{#md-button class="md-raised front-end" param="front-end" action="setCourse" tagName="a"}}Front End Engineering{{/md-button}}
+            {{#md-button class="md-raised mobile" param="mobile" action="setCourse" tagName="a"}}Mobile Engineering{{/md-button}}
+            {{#md-button class="md-raised python" param="python" action="setCourse" tagName="a"}}Python Data Engineering{{/md-button}}
+            {{#md-button class="md-raised web" param="web" action="setCourse" tagName="a"}}Web Design{{/md-button}}
+
+        {{/md-input-container}}
+    </div>
+
+
+        {{#md-input-container value=model.portfolio_url}}
+            <label>Portfolio URL</label>
+            {{md-input }}
+        {{/md-input-container}}
+
+
+
+
+        {{#md-input-container value=model.github_url}}
+            <label>Github URL</label>
+            {{md-input }}
+        {{/md-input-container}}
+
+
+
+
+        {{#md-input-container value=model.profile_pic_link}}
+            <label>Picture URL</label>
+            {{md-input }}
+        {{/md-input-container}}
+
+
+  {{#md-button class="md-raised md-primary"}}Add to Project{{/md-button}}
+
+</form>
+
+</md-content>

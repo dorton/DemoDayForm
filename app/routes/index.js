@@ -13,8 +13,9 @@ export default Ember.Route.extend({
 
   actions: {
     assignCohort: function(cohort){
-      console.log("Yo from controller");
-      this.set("cohort", cohort);
+      this.controller.set("cohort", cohort);
+      this.transitionTo("cohort", cohort);
+
     }
   }
 });
