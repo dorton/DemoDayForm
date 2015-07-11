@@ -1,24 +1,23 @@
-
-
-
-<md-content class="md-padding">
-
-    <h2 class="md-display-1">Select a Cohort</h2>
-
-    {{#md-list}}
-
-    {{#each model key="id" as |cohort|}}
-      {{#md-list-item class="md-3-line"}}
-        <div class="md-list-item-text">
-          {{#md-button class="md-primary md-hue-1"}}<a href="#" {{action 'assignCohort' cohort }}>{{cohort.city}} - {{cohort.demo_day_date}}</a>{{/md-button}}
-        </div>
-      {{/md-list-item}}
-    {{/each}}
-
-    {{/md-list}}
-
-
-
-{{outlet}}
-
-</md-content>
+<div class="display-content" layout="column" style="padding-bottom: 15px;">
+  <md-content class="md-padding">
+    <h2 class="md-display-2">Select a Cohort</h2>
+      {{#each model key="id" as |cohort|}}
+        <!-- <md-content> -->
+          <md-card>
+            <md-card-content>
+              <h3 class="md-display-1">{{cohort.city}}</h3>
+              <h1 class="md-title">Demo Day Date</h1>
+                {{#md-list}}
+                  {{#md-list-item}}
+                      {{#md-button class="md-primary md-hue-1"}}
+                        <a href="#" {{action 'assignCohort' cohort }}>{{cohort.demo_day_date}}</a>
+                      {{/md-button}}
+                  {{/md-list-item}}
+                {{/md-list}}
+            </md-card-content>
+          </md-card>
+        <!-- </md-content> -->
+      {{/each}}
+    {{outlet}}
+  </md-content>
+</div>

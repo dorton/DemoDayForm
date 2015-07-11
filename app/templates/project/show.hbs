@@ -15,9 +15,6 @@
 
 <h2>Student(s) on Project</h2>
 
-{{#link-to 'project.addstudent' model}}Add Yourself{{/link-to}}
-
-
 <ul>
 {{#each model.students as |student|}}
   <li>{{student.name}}</li>
@@ -26,6 +23,8 @@
   <li>No students on this project (yet)</li>
 {{/each}}
 </ul>
+
+<h2 class="md-display-1">{{#link-to 'project.addstudent' model}}Add Yourself{{/link-to}}</h2>
 
 
 

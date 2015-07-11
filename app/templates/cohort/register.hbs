@@ -12,13 +12,14 @@
 
 
   <form {{action "createProject" on="submit"}}>
-  <md-content class="md-padding" layout="row" layout-sm="column">
+  <md-content class="md-padding" layout="row" layout-lg="column">
       {{#md-input-container value=model.app_name}}
           <label>App Name</label>
           {{md-input }}
       {{/md-input-container}}
 
   </md-content>
+
 
   <md-content class="md-padding" layout="row" layout-sm="column">
       {{#md-input-container value=model.app_url}}
@@ -30,12 +31,13 @@
           <label>Tech Used</label>
           {{md-input }}
       {{/md-input-container}}
+  </md-content>
 
       {{#md-input-container value=model.rationale}}
           <label>Rationale</label>
-          {{md-input }}
+          {{md-textarea columns="1" md-maxlength="150"}}
       {{/md-input-container}}
-  </md-content>
+
 
   {{#md-button class="md-raised md-primary"}}Create Project{{/md-button}}
 
