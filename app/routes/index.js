@@ -7,7 +7,7 @@ export default Ember.Route.extend({
     //   name: "Jwo"
     // });
 
-    return this.store.findAll('cohort');
+    return this.store.findAll('cohort').then(function(cohorts) { return cohorts.sortBy('city'); });
   },
 
 

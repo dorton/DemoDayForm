@@ -24,8 +24,9 @@
 {{/each}}
 </ul>
 
-<h2 class="md-display-1">{{#link-to 'project.addstudent' model}}Add Yourself{{/link-to}}</h2>
-
+<h2 class="md-display-1">
+  {{#md-button classNames="md-raised md-primary" action='addSelfToProject' param=model}}Add Yourself{{/md-button}}
+</h2>
 
 
 {{outlet}}

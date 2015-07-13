@@ -1,1 +1,6 @@
 @import "ember-material-design";
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+}

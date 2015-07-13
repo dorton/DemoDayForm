@@ -5,4 +5,5 @@ export default DS.Model.extend({
   city: DS.attr("string"),
   display_name: DS.attr('string'),
   projects: DS.hasMany('project', { async: true })
+
 });

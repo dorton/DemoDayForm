@@ -8,10 +8,14 @@
   <li>If you need to register your project (group or individual), {{#link-to 'cohort.register'}}Register Project{{/link-to}}</li>
 </ul>
 
-{{#each model.projects as |project|}}
-  <li>{{#link-to 'project.show' project}} {{project.app_name}}{{/link-to}}</li>
-{{/each}}
 
+{{#md-list}}
+  {{#each model.projects as |project|}}
+    {{#md-list-item}}
+      {{#md-button tagName="a" action='visitProject' param=project}}{{project.app_name}}{{/md-button}}
+    {{/md-list-item}}
+  {{/each}}
+{{/md-list}}
 
 {{outlet}}
 
