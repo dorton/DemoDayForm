@@ -2,18 +2,16 @@
   <h2 class="md-display-2">Select a Cohort</h2>
 </div>
 
-<div class="display-content" layout="row">
-  <md-content class="md-padding boxes">
+<div class="display-content">
+  <md-content class="md-padding cards">
       {{#each model key="id" as |cohort|}}
-        <!-- <md-content> -->
-          <md-card >
+          <md-card class="card">
             <md-card-content>
               <h3 class="md-display-3">{{cohort.city}}</h3>
               <h1 class="md-title">Demo Day Date</h1>
               {{#md-button class="md-raised md-display-1" action='assignCohort' param=cohort}}{{cohort.demo_day_date}}{{/md-button}}
             </md-card-content>
           </md-card>
-        <!-- </md-content> -->
       {{/each}}
     {{outlet}}
   </md-content>

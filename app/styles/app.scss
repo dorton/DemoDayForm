@@ -1,6 +1,12 @@
 @import "ember-material-design";
 
-.boxes {
+.cards {
   display: flex;
   flex-wrap: wrap;
+  flex-shrink: 1;
+}
+
+.card {
+  height: 350px;
+  width: 320px;
 }
