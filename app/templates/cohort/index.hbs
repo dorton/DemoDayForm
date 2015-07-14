@@ -3,19 +3,41 @@
 
 <h2 class="md-display-3">{{model.city}} {{model.demo_day_date}}</h2>
 
+
+
 <ul>
   <li>If you need to add yourself to a group listed below, visit the project.</li>
   <li>If you need to register your project (group or individual), {{#link-to 'cohort.register'}}Register Project{{/link-to}}</li>
 </ul>
 
+<h2 class="md-display-2">Registered Projects</h2>
+<div class="display-content">
+  <md-content class="md-padding cards">
+    {{#each model.projects as |project|}}
+    <md-card class="card">
+        <md-card-content>
+          <h1 class="md-display-1">{{#link-to 'project.show' project}}{{project.app_name}}{{/link-to}}</h1>
 
-{{#md-list}}
+          {{#each project.students as |student|}}
+            <li>{{student.name}}</li>
+          {{else}}
+            <li>No students on this project (yet)</li>
+          {{/each}}
+
+          <!--  -->
+        </md-card-content>
+      </md-card>
+    {{/each}}
+  </md-content>
+</div>
+
+<!-- {{#md-list}}
   {{#each model.projects as |project|}}
     {{#md-list-item}}
       {{#md-button tagName="a" action='visitProject' param=project}}{{project.app_name}}{{/md-button}}
     {{/md-list-item}}
   {{/each}}
-{{/md-list}}
+{{/md-list}} -->
 
 {{outlet}}
 
