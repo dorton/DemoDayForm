@@ -28,6 +28,9 @@ export default Ember.Route.extend({
       let dictionary = {
         "rails": "Rails Engineering",
         "web": "Web Design",
+        "front-end": "Front End Engineering",
+        "mobile": "Mobile Engineering",
+        "python": "Python Data Engineering",
       }
 
       this.controller.get("model").set("course", dictionary[course]);
@@ -36,8 +39,6 @@ export default Ember.Route.extend({
 
 
     addStudent: function(){
-
-      console.log("addStudent");
 
       let route = this;
 

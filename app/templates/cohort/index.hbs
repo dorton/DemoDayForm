@@ -24,20 +24,14 @@
             <li>No students on this project (yet)</li>
           {{/each}}
 
-          <!--  -->
         </md-card-content>
       </md-card>
+
+    {{else}}
+      <h2 class="md-display-2">No projects registered for Cohort (yet)</h2>
     {{/each}}
   </md-content>
 </div>
-
-<!-- {{#md-list}}
-  {{#each model.projects as |project|}}
-    {{#md-list-item}}
-      {{#md-button tagName="a" action='visitProject' param=project}}{{project.app_name}}{{/md-button}}
-    {{/md-list-item}}
-  {{/each}}
-{{/md-list}} -->
 
 {{outlet}}
 

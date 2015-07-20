@@ -1,10 +1,26 @@
 <div class="display-content" layout="row">
   <h2 class="md-display-2">Select a Cohort</h2>
+
+
+
 </div>
+
+<section layout="row" class="cityFilter" layout-sm="column" layout-align="center center">
+
+  {{#md-button class="md-raised" action='allCities' param=null }}All{{/md-button}}
+
+  {{#each allCities as |city|}}
+    <span id="filter-by-{{city}}">
+      {{#md-button class="md-raised" action='filterByCity' param=city}}{{city}}{{/md-button}}
+    </span>
+  {{/each}}
+
+</section>
+
 
 <div class="display-content">
   <md-content class="md-padding cards">
-      {{#each model key="id" as |cohort|}}
+      {{#each filteredCohorts key="id" as |cohort|}}
           <md-card class="card">
             <md-card-content>
               <h3 class="md-display-3">{{cohort.city}}</h3>
