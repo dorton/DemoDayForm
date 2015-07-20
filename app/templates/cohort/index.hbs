@@ -17,7 +17,7 @@
     <md-card class="card">
         <md-card-content>
           <h1 class="md-display-1">{{#link-to 'project.show' project}}{{project.app_name}}{{/link-to}}</h1>
-
+          <h1 class="md-title">Students on Project</h1>
           {{#each project.students as |student|}}
             <li>{{student.name}}</li>
           {{else}}
